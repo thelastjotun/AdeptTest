@@ -1,0 +1,7 @@
+[sqlDatabaseData]
+dataBaseName=adeptTest
+driver=QPSQL
+hostName=localhost
+password=12345678
+port=5438
+userName=adept

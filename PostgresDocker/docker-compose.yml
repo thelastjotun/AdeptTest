@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+
+  db_auth:
+    container_name: adepttest_database
+    restart: always
+    ports:
+      - "5438:5432"
+    image: postgis/postgis:16-3.4
+
+    environment:
+      - POSTGRES_USER=adept
+      - POSTGRES_PASSWORD=12345678
+      - POSTGRES_DB=adeptTest
+
+    shm_size: 128mb
+
+    volumes:
+    - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+    
